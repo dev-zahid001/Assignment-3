@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Fruit burst website</title>
+  <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+
 <!-- font lato -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +21,33 @@
 .font-lato{
   font-family: 'Lato', sans-serif;
 }
+.test{
+  position: relative;
+}
+.test::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000071;
+  z-index: 1;
+}
+.icon{
+  font-size: 25px;
+  padding: 6px;
+  margin:0 2px
+}
 </style>
 </head>
 <body>
   <header>
 
 <nav>
-  <div class="navbar bg-white text-black lg:bg-[#F85559] lg:text-white rounded-full mt-12 container max-auto pt-5 pb-5 justify-around ">
-    <div class="navbar-start w-auto">
-      <div class="dropdown">
+  <div class="navbar bg-white text-black lg:bg-[#F85559] lg:text-white rounded-full mt-12 container max-auto pt-4 pb-4 justify-around ">
+ <div class="navbar-start w-auto">
+ <div class="dropdown">
         <label tabindex="0" class="lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
         </label>
@@ -34,7 +59,7 @@
         </ul>
       </div>
       <div class="navbar-center hidden lg:flex justify-around">
-        <ul class="menu menu-horizontal px-8 font-medium">
+        <ul class="menu menu-horizontal px-8 font-medium text-lg">
           <li><a>Home</a></li>
             <li><a>About Us</a></li>
             <li><a>Shop</a></li>
@@ -45,9 +70,9 @@
     </div>
     <div class="flex h-auto w-8 lg:w-auto gap-5 lg:pl-10 pr-10 ">
       <img src="images/logo.png" alt="">
-      <a class="normal-case text-lg lg:text-4xl font-bold mt-2">Fruit Burst</a>
+      <a class="normal-case text-lg lg:text-4xl font-bold">Fruit Burst</a>
 </div>
-    <div class="navbar-end w-auto pl-20 pr-20 bg-white pt-2 pb-2 rounded-full">
+    <div class="navbar-end w-auto pl-20 pr-20 bg-white pt-1 pb-1 rounded-full">
       <input type="text" placeholder="Search here" class="input input-ghost w-full max-w-sm" />
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3965 17.9996 12.4887 17.9996 10.4995C17.9996 8.51035 17.2094 6.60262 15.8028 5.19605C14.3962 3.78947 12.4885 2.99927 10.4993 2.99927C8.51011 2.99927 6.60238 3.78947 5.19581 5.19605C3.78923 6.60262 2.99902 8.51035 2.99902 10.4995C2.99902 12.4887 3.78923 14.3965 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,30 +86,58 @@
 <!-- hero section start -->
 <section>
   <div class="carousel w-full mt-16 ">
-    <div id="slide1" class="carousel-item relative w-full">
+    <div id="slide1" class="carousel-item relative w-full test">
       <img src="./images/banner1.png" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide4" class="btn btn-circle">❮</a> 
-        <a href="#slide2" class="btn btn-circle">❯</a>
+      <div class="absolute left-0 right-0 mx-auto top-20 text-center z-50">
+        <h1 class="font-extrabold text-6xl text-white ">Exotic tastes at your 
+          <br>
+          doorstep</h1>
+        <p class="font-medium text-xl text-white mt-5">We supply highly quality organic products</p>
+        <button class="btn bg-[#f85559] text-white border-none mt-5">Shop Now</button>
+      </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-50">
+        <a href="#slide4" class="btn btn-circle ">❮</a> 
+        <a href="#slide2" class="btn btn-circle ">❯</a>
       </div>
     </div> 
-    <div id="slide2" class="carousel-item relative w-full">
+    <div id="slide2" class="carousel-item relative w-full test">
       <img src="./images/banner2.png" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <div class="absolute left-0 right-0 mx-auto top-20 text-center z-50">
+        <h1 class="font-extrabold text-6xl text-white ">Exotic tastes at your 
+          <br>
+          doorstep</h1>
+        <p class="font-medium text-xl text-white mt-5">We supply highly quality organic products</p>
+        <button class="btn bg-[#f85559] text-white border-none mt-5">Shop Now</button>
+      </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-50">
         <a href="#slide1" class="btn btn-circle">❮</a> 
         <a href="#slide3" class="btn btn-circle">❯</a>
       </div>
     </div> 
-    <div id="slide3" class="carousel-item relative w-full">
+    <div id="slide3" class="carousel-item relative w-full test">
       <img src="./images/banner3.png" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <div class="absolute left-0 right-0 mx-auto top-20 text-center z-50">
+        <h1 class="font-extrabold text-6xl text-white ">Exotic tastes at your 
+          <br>
+          doorstep</h1>
+        <p class="font-medium text-xl text-white mt-5">We supply highly quality organic products</p>
+        <button class="btn bg-[#f85559] text-white border-none mt-5">Shop Now</button>
+      </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-50">
         <a href="#slide2" class="btn btn-circle">❮</a> 
         <a href="#slide4" class="btn btn-circle">❯</a>
       </div>
     </div> 
-    <div id="slide4" class="carousel-item relative w-full">
+    <div id="slide4" class="carousel-item relative w-full test">
       <img src="./images/banner4.png" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <div class="absolute left-0 right-0 mx-auto top-20 text-center z-50">
+        <h1 class="font-extrabold text-6xl text-white ">Exotic tastes at your 
+          <br>
+          doorstep</h1>
+        <p class="font-medium text-xl text-white mt-5">We supply highly quality organic products</p>
+        <button class="btn bg-[#f85559] text-white border-none mt-5">Shop Now</button>
+      </div>
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-50">
         <a href="#slide3" class="btn btn-circle">❮</a> 
         <a href="#slide1" class="btn btn-circle">❯</a>
       </div>
@@ -94,8 +147,8 @@
 <!-- hero section end -->
 
 <!-- fruits section start -->
-<section class=" items-center pl-20 pr-20 ">
-  <div class="flex justify-center gap-x-20 bg-black">
+<section class=" items-center pl-20 pr-20 mb-32 rounded-lg relative">
+  <div class="flex justify-center gap-x-20 -mt-24 bg-white ml-32 shadow-xl absolute">
     <div>
       <img src="./images/fruit1.png" alt="">
       <p>Angur</p>
@@ -123,7 +176,7 @@
 
   <!-- countdown section -->
   <main>
- <section class="flex justify-between pl-16 pr-16 mt-20">
+ <section class="flex justify-between pl-16 pr-16 mt-60">
   <div class="">
 <h2 class="text-5xl font-bold text-black mb-5">Deal of the day</h2>
 <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
@@ -133,7 +186,7 @@
   <div>
     <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
       <div class="flex flex-col">
-        <span class="countdown font-mono text-5xl">
+        <span class="countdown font-mono text-5xl font-extrabold">
           <span style="--value:29;"></span>
           
             <img class="w-7 h-7 mt-2 pl-2"src="./images/Frame (3).svg" alt="">
@@ -142,21 +195,21 @@
         days
       </div> 
       <div class="flex flex-col">
-        <span class="countdown font-mono text-5xl">
+        <span class="countdown font-mono text-5xl font-extrabold">
           <span style="--value:15;"></span>
           <img class="w-7 h-7 mt-2 pl-2"src="./images/Frame (3).svg" alt="">
         </span>
         hours
       </div> 
       <div class="flex flex-col">
-        <span class="countdown font-mono text-5xl">
+        <span class="countdown font-mono text-5xl font-extrabold">
           <span style="--value:25;"></span>
           <img class="w-7 h-7 mt-2 pl-2"src="./images/Frame (3).svg" alt="">
         </span>
         min
       </div> 
       <div class="flex flex-col">
-        <span class="countdown font-mono text-5xl">
+        <span class="countdown font-mono text-5xl font-extrabold">
           <span style="--value:8;"></span>
           <img class="w-7 h-7 mt-2 pl-2"src="./images/Frame (3).svg" alt="">
         </span>
@@ -260,12 +313,59 @@
       <div class="hero min-h-screen" style="background-image: url(./images/team.png);">
         <div class="hero-overlay bg-black bg-opacity-70"></div>
         <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-lg">
+
+          <div class="max-w-lg -mt-72 ">
             <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
             <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
           </div>
         </div>
+
+        <div class="flex  gap-20">
+          <div class="mt-60">
+            <img src="./images/member1.png" alt="">
+            <h3 class="text-white text-2xl font-bold mt-3 text-center">Awlad Hossain</h3>
+            <p class="text-white text-base text-center mt-3">Fruits Expert</p>
+            <div class="icon mt-2 text-center space-x-2">
+              <i class="fa-brands fa-facebook bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full "></i>
+              <i class="fa-brands fa-twitter bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+              <i class="fa-brands fa-linkedin bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-60">
+            <img src="./images/member2.png" alt="">
+            <h3 class="text-white text-2xl font-bold mt-3 text-center">Safia Chowdhury</h3>
+            <p class="text-white text-base text-center mt-3">Fruits Expert</p>
+            <div class="icon mt-2 text-center space-x-2">
+              <i class="fa-brands fa-facebook bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full "></i>
+              <i class="fa-brands fa-twitter bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+              <i class="fa-brands fa-linkedin bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-60">
+            <img src="./images/member3.png" alt="">
+            <h3 class="text-white text-2xl font-bold mt-3 text-center">Rokib Hossain</h3>
+            <p class="text-white text-base text-center mt-3">Fruits Expert</p>
+            <div class="icon mt-2 text-center space-x-2">
+              <i class="fa-brands fa-facebook bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full "></i>
+              <i class="fa-brands fa-twitter bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+              <i class="fa-brands fa-linkedin bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+            </div>
+          </div>
+          <div class="mt-60">
+            <img src="./images/member4.png" alt="">
+            <h3 class="text-white text-2xl font-bold mt-3 text-center">Chaity</h3>
+            <p class="text-white text-base text-center mt-3">Fruits Expert</p>
+            <div class="icon mt-2 text-center space-x-2">
+              <i class="fa-brands fa-facebook bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full "></i>
+              <i class="fa-brands fa-twitter bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+              <i class="fa-brands fa-linkedin bg-[#F85559] text-white hover:bg-white hover:text-[#F85559] cursor-pointer rounded-full"></i>
+            </div>
+          </div>
+             </div>
+
+
       </div>
+      
     </section>
     <!-- team section end -->
 
